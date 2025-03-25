@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="container-fluid container-wrapper">
+        <div class="modal-content p-4">
+            <h5 class="modal-title">Add Task</h5>
+            <hr>
+            <form id="taskForm"> <!-- ✅ Fixed: This should be the correct form ID -->
+                <legend>Task Details</legend>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="taskOwner" class="form-label">Task owner <i class="bi bi-person"></i></label>
+                        <select id="taskOwner" class="form-select">
+                            <option selected>Pooja Kulkarni 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="taskName" class="form-label">Task name <span class="text-danger">*</span></label>
+                        <input type="text" id="taskName" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea id="description" class="form-control" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" id="startDate" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="dueDate" class="form-label">Due Date</label>
+                        <input type="date" id="dueDate" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="reminder" class="form-label">Reminder</label>
+                        <input type="datetime-local" id="reminder" class="form-control">
+                    </div>
+
+
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="priority" class="form-label">Priority</label>
+                        <div class="d-flex">
+                            <select id="priority" class="form-select">
+                                <option>Moderate</option>
+                                <option>High</option>
+                                <option>Low</option>
+                            </select>
+                            <button class="btn btn-light ms-2">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
+                        <div class="d-flex">
+                            <select id="status" class="form-select">
+                                <option>Open</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                            </select>
+
+                            <button class="btn btn-light ms-2">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </a>
+                    <button type="button" class="btn btn-primary">Submit and New</button>
+                    <button type="button" class="btn btn-primary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="add-task.js"></script>
+</body>
+
+</html>

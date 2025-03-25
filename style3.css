@@ -1,0 +1,59 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.task-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-owner {
+    background-color: #e3f2fd;
+    border-radius: 6px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e91e63;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 6px;
+}
+
+.table td {
+    border: none;
+    padding: 8px 12px;
+}
+table tr{
+    border-bottom: 1px solid rgb(211, 207, 207);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-owner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-owner .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .due-date, .status {
+        margin-top: 5px;
+    }
+}
+
+
+
+

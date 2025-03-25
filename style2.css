@@ -1,0 +1,102 @@
+/* General Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Center the form */
+.container-wrapper {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Modal Box */
+.modal-content {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer buttons */
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Left align buttons */
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 6px;
+    padding: 8px 15px;
+}
+
+.btn-primary {
+    background-color: rgb(10, 82, 238);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(5, 60, 200);
+}
+
+/* Form Elements */
+.form-control, .form-select {
+    width: 100%;
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: auto;
+    padding: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-wrapper {
+        align-items: flex-start; /* Keep at the top on mobile */
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    .row .col-md-6 {
+        width: 100%; /* Make form fields full width */
+    }
+
+    .modal-footer {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: flex-start;
+    }
+}
+
+.is-invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
